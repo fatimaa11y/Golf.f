@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة دعم فني</title>
+    <link rel="stylesheet" href="s.css">
+</head>
+<body>
+    <div class="background-image">
+        <!-- الشعار في الأعلى -->
+        <div class="logo">
+            <img src="sx.jpg" alt="الشعار" />
+        </div>
+
+    <header>
+        <div class="container">
+            <h1>دعم فني</h1>
+            <nav>
+                <ul> 
+                    <li><a href="ex4.html">صفحةالرئيسة</a></li>
+                    <li><a href="ex5.html">عن الجولف</a></li>
+                    <li><a href="ex6.html">قوانين الجولف</a></li>
+                    <li><a href="ex7.html">ملاعب الجولف</a></li>
+                    <li><a href="ex8.html" >خدمات</a></li>
+                    <li><a href="ex9.html">حزم المخصصة</a></li>
+                    <li><a href="ex10.html">حجز</a></li>
+                    <li><a href="ex11.html" class="active" >الدعم الفني</a></li>
+                    <li><a href="ex12.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-form">
+            <div class="form-container">
+                <h2>اتصل بفريق الدعم</h2>
+                <form id="support-form">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="issue">وصف المشكلة</label>
+                        <textarea id="issue" name="issue" required></textarea>
+                    </div>
+                    <button type="submit">إرسال</button>
+                </form>
+                <div id="message"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="c.js"></script>
+</body>
+</html>

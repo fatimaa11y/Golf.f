@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الجولف</title>
+    <link rel="stylesheet" href="s.css">
+    <head>
+        <script src="c.js" defer></script>
+    </head>    
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo" src="sx.jpg
+        " alt="شعار الموقع">
+        <h1>مرحبا بكم في موقع الجولف</h1>
+        <div class="menu">
+            <a href="ex4.html" class="active">صفحةالرئيسة</a>
+            <a href="ex5.html">عن الجولف</a>
+            <a href="ex6.html">قوانين الجولف</a>
+            <a href="ex7.html">ملاعب الجولف</a>
+            <a href="ex8.html">خدمات </a>
+            <a href="ex9.html"> حزم</a>
+            <a href="ex10.html">حجز </a>
+            <a href="ex11.html">دعم الفني</a>
+            <a href="ex12.html">اتصل بنا</a>
+        </div>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="بحث..." onkeyup="showResults()">
+            <div class="search-results" id="search-results"></div>
+            
+            <div class="slider">
+                <img id="slider-img" src="a.jpg" width="100%">
+                <a href="ex10.html" class="booking-btn">احجز الآن</a>
+            </div>            
+        </div>
+    </div>
+    <script>
+        let images = ["a.jpg", "p.jpg", "r.jpg", "ص.jpg"];
+        let index = 0;
+        setInterval(() => {
+            index = (index + 1) % images.length;
+            document.getElementById("slider-img").src = images[index];
+        }, 3000);
+
+        function showResults() {
+            let input = document.getElementById("search-input").value.toLowerCase();
+            let resultsDiv = document.getElementById("search-results");
+            let pages = {
+                "الرئيسية": "ex4.html",
+                "عن الجولف": "ex5.html",
+                "قوانين الجولف": "ex6.html",
+                "ملاعب الجولف": "ex7.html",
+                " خدمات": "ex8.html",
+                "حزم": "ex9.html",
+                " حجز": "ex10.html",
+                "الدعم الفني": "ex11.html",
+                "اتصل بنا": "ex12.html"
+            };
+            
+            resultsDiv.innerHTML = "";
+            if (input !== "") {
+                for (let page in pages) {
+                    if (page.toLowerCase().includes(input)) {
+                        let div = document.createElement("div");
+                        div.textContent = page;
+                        div.onclick = function() {
+                            window.location.href = pages[page];
+                        };
+                        resultsDiv.appendChild(div);
+                    }
+                }
+                resultsDiv.style.display = "block";
+            } else {
+                resultsDiv.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

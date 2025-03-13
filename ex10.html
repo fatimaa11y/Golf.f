@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز موعد</title>
+    <link rel="stylesheet" href="10.css"> <!-- ربط ملف الـ CSS -->
+    <script src="10.js" defer></script> <!-- ربط ملف الـ JavaScript -->
+</head>
+<body>
+    <div class="background-image">
+        <!-- الشعار في الأعلى -->
+        <div class="logo">
+            <img src="sx.jpg" alt="الشعار" />
+        </div>
+        
+        <!-- عنوان النموذج ورابط العودة -->
+        <div class="header">
+            <h1>نموذج الحجز</h1>
+            <a href="ex4.html" class="back-btn">عودة إلى الرئيسية</a>
+        </div>
+
+        <!-- نموذج الحجز -->
+        <form class="booking-form" id="booking-form" onsubmit="handleSubmit(event)">
+            <!-- حقل الاسم -->
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- حقل البريد الإلكتروني أو رقم الهاتف -->
+            <label for="contact">البريد الإلكتروني أو رقم الهاتف:</label>
+            <input type="text" id="contact" name="contact" required>
+
+            <!-- حقل تاريخ الحجز -->
+            <label for="date">تاريخ الحجز:</label>
+            <input type="date" id="date" name="date" required>
+
+            <!-- حقل عدد اللاعبين -->
+            <label for="players">عدد اللاعبين:</label>
+            <select id="players" name="players" onchange="addPlayerFields()">
+                <option value="1">1 لاعب</option>
+                <option value="2">2 لاعبين</option>
+                <option value="3">3 لاعبين</option>
+                <option value="4">4 لاعبين</option>
+            </select>
+
+            <!-- حقول أسماء اللاعبين -->
+            <div id="player-names"></div>
+
+            <!-- حقل اختيار الملعب -->
+            <label for="course">اختر الملعب:</label>
+            <select id="course" name="course">
+                <option value="course1">ملعب 1</option>
+                <option value="course2">ملعب 2</option>
+                <option value="course3">ملعب 3</option>
+            </select>
+
+            <!-- زر إرسال النموذج -->
+            <button type="submit">إرسال الطلب</button>
+        </form>
+
+        <!-- رسالة التأكيد عند إرسال الحجز -->
+        <div id="confirmation-message" style="display:none;">
+            <h2>تم إرسال الحجز بنجاح!</h2>
+            <p>شكراً لك! تم حجز الموعد بنجاح. سنوافيك بالتفاصيل قريباً.</p>
+            <br>
+            <a href="دفع.html" class="back-btn">الذهاب لدفع انلاين</a>
+            <br>
+        </div>
+    </div>
+</body>
+</html>

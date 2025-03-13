@@ -1,0 +1,164 @@
+/* تعيين خصائص عامة للصفحة */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* الخلفية */
+.background-image {
+    background-image: url('background.jpg'); /* استبدل الرابط بالصورة الخاصة بك */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* لجعل الشعار وصفحات التنقل في الأعلى */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* الشعار في الزاوية العليا اليمنى */
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+}
+
+.logo img {
+    max-width: 120px;
+}
+
+/* أزرار التنقل في الأعلى */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 0; /* تقليل padding لزيادة المسافة بين الأزرار والغلاف */
+    margin-top: 20px; /* إبعاد الأزرار عن الحافة العلوية */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start; /* محاذاة العناصر من اليمين إلى اليسار */
+    flex-direction: row-reverse; /* عكس الترتيب ليبدأ من اليمين إلى اليسار */
+}
+
+header nav ul li {
+    margin: 0 20px; /* تقليل المسافة بين الأزرار */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em; /* تقليل حجم الخط */
+    padding: 8px 12px; /* تقليل حجم الأزرار */
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* إضافة تأثير الزوايا المدورة للأزرار */
+}
+
+header nav ul li a:hover, .active {
+    text-decoration: underline;
+    color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.2); /* إضافة تأثير خلفية عند التمرير */
+}
+
+/* قسم الحزم مع الشفافية */
+.packages-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 120px; /* إضافة مسافة لتجنب التداخل مع الشريط العلوي */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* صناديق الحزم */
+.package-box {
+    background-color: rgba(255, 255, 255, 0.8); /* خلفية شفافة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 45%; /* عرض الصندوقين بجانب بعض */
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-box:hover {
+    transform: translateY(-5px); /* تأثير تحريك للأعلى عند التمرير */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* زيادة الظل عند التمرير */
+}
+
+.package-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.package-box img:hover {
+    opacity: 1;
+}
+
+.package-box h2 {
+    color: #333;
+    font-size: 1.6em;
+    margin-top: 10px;
+}
+
+.package-box p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.package-box .price {
+    font-size: 1.2em;
+    color: #4CAF50;
+    margin: 10px 0;
+}
+
+.book-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.1em;
+}
+
+.book-btn:hover {
+    background-color: #45a049;
+}
+
+/* تنسيق الحزم المخصصة */
+.package-box.custom {
+    background-color: rgba(249, 249, 249, 0.9); /* خلفية شفافة لبوكس الحزم المخصصة */
+    border: 2px dashed #4CAF50;
+}
+
+/* إزالة شريط التنقل السفلي */
+footer {
+    display: none; /* إخفاء شريط التنقل السفلي بالكامل */
+}
+
+/* استجابة للهواتف المحمولة */
+@media (max-width: 768px) {
+    .package-box {
+        width: 100%; /* عرض الصندوق بنسبة 100% عند الشاشات الصغيرة */
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدفع لحجوزات الجولف</title>
+    <link rel="stylesheet" href="دفع.css">
+    
+</head>
+<body>
+    <div class="background-image">
+        <!-- الشعار في الأعلى -->
+        <div class="logo">
+            <img src="sx.jpg" alt="الشعار" />
+        </div>
+    <div class="payment-container">
+        <h1>الدفع لحجز الجولف</h1>
+        <div class="menu">
+            <a href="ex4.html">صفحةالرئيسة</a>
+            <a href="ex5.html">عن الجولف</a>
+            <a href="ex6.html">قوانين الجولف</a>
+            <a href="ex7.html">ملاعب الجولف</a>
+            <a href="ex8.html">خدمات </a>
+            <a href="ex9.html"> حزم</a>
+            <a href="ex10.html">حجز </a>
+            <a href="دفع.html"class="active">دفع</a>
+            <a href="ex11.html">دعم الفني</a>
+            <a href="ex12.html">اتصل بنا</a>
+        </div>
+        <form id="paymentForm">
+            <h2>معلومات الحجز</h2>
+            <label for="name">الاسم الكامل:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" required>
+            
+            <label for="phone">رقم الهاتف:</label>
+            <input type="tel" id="phone" required>
+            
+            <label for="booking-type">نوع الحجز:</label>
+            <select id="booking-type">
+                <option value="course">ملعب جولف</option>
+                <option value="membership">اشتراك شهري</option>
+            </select>
+            
+            <h2>معلومات الدفع</h2>
+            <label for="card-number">رقم البطاقة:</label>
+            <input type="text" id="card-number" maxlength="16" required>
+            
+            <label for="expiry">تاريخ الانتهاء:</label>
+            <input type="text" id="expiry" placeholder="MM/YY" required>
+            
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" maxlength="3" required>
+            <label for="discount">اختر كود الخصم:</label>
+            <select id="discount" name="discount">
+                <option value="none">بدون كود خصم</option>
+                <option value="DISCOUNT10">خصم 10%</option>
+                <option value="DISCOUNT20">خصم 20%</option>
+                <option value="VIP30">خصم 30% (VIP)</option>
+            </select>
+            <button type="submit">إتمام الدفع</button>
+        </form>
+
+        <p id="payment-message" class="hidden"></p>
+    </div>
+    
+    <script src="دفع.js"></script>
+</body>
+</html>

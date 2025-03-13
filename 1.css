@@ -1,0 +1,41 @@
+/* استايل الخلفية */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+    background: url('a.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* استايل الشعار */
+.logo img {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 15px;
+    right: 15px; /* وضع الشعار في الجهة العلوية اليمنى */
+}
+
+/* استايل المحتوى */
+.content {
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* استايل الأزرار */
+.button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    color: white;
+    background: #ff6600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}

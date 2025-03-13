@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="2.css">
+</head>
+<body>
+    <div class="background-image">
+        <div class="login-container">
+            <div class="logo">
+                <img src="sx.jpg" alt="شعار الموقع"> <!-- الشعار داخل البوكس -->
+            </div>
+            <div class="login-form">
+                <h1>تسجيل الدخول</h1>
+                <form action="#" method="POST" id="loginForm">
+                    <label for="username">اسم المستخدم:</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="password">كلمة المرور:</label>
+                    <input type="password" id="password" name="password" required>
+                    
+                    <button type="button" id="loginButton">تسجيل الدخول</button>
+
+                    <p>ليس لديك حساب؟ <a href="ex3.html">إنشاء حساب</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function () {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "" || password === "") {
+                alert("الرجاء ملء جميع الحقول");
+                return; // عدم المتابعة إذا كانت الحقول فارغة
+            }
+
+            // يمكنك التحقق من البيانات هنا باستخدام AJAX إذا كنت تستخدم خادم حقيقي
+            // للتوجيه بعد التحقق من صحة البيانات
+            window.location.href = "ex4.html"; // التوجيه إلى صفحة أخرى بعد تسجيل الدخول بنجاح
+        });
+    </script>
+</body>
+</html>

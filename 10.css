@@ -1,0 +1,102 @@
+
+/* تعيين الخطوط والتنسيقات العامة */
+body {
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.background-image {
+    background-image: url('background.jpg'); /* يمكنك تغيير الرابط */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+}
+
+.logo img {
+    max-width: 150px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+.back-btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.booking-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.booking-form label {
+    display: block;
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.booking-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background-color: #45a049;
+}
+
+/* تخصيص لحقول اللاعبين */
+#player-names {
+    margin-top: 15px;
+}
+
+#player-names input {
+    width: calc(100% - 22px);
+    margin-top: 5px;
+    padding: 10px;
+}
+
+/* تنسيق لواجهة المحمول */
+@media (max-width: 600px) {
+    .booking-form {
+        width: 90%;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+}

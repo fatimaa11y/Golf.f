@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب</title>
+    <link rel="stylesheet" href="s.css">
+</head>
+<body>
+    <div class="signup-box">
+    <img src="sx.jpg" alt="شعار الموقع" class="logo"> <!-- الشعار خارج البوكس -->
+
+        <h2>إنشاء حساب</h2>
+        <form id="signupForm">
+            <input type="text" id="name" placeholder="الاسم الكامل" required>
+            <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+            <input type="password" id="password" placeholder="كلمة المرور" required>
+            <input type="password" id="confirm-password" placeholder="تأكيد كلمة المرور" required>
+            <button type="submit">تسجيل</button>
+        </form>
+        <p>لديك حساب؟ <a href="ex2.html">تسجيل الدخول</a></p>
+    </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+
+            if (password !== confirmPassword) {
+                alert("كلمات المرور غير متطابقة! يرجى إعادة المحاولة.");
+                return;
+            }
+
+            window.location.href = "ex4.html"; // توجيه المستخدم للصفحة الرئيسية
+        });
+    </script>
+
+</body>
+</html>

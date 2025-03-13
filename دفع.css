@@ -1,0 +1,69 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    background: url('a.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.payment-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #2E8B57;
+}
+
+label {
+    display: block;
+    text-align: right;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #2E8B57;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1E5F3F;
+}
+
+.hidden {
+    display: none;
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+}
+
+/* استايل الشعار */
+.logo img {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 15px;
+    right: 15px; /* وضع الشعار في الجهة العلوية اليمنى */
+}
